@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Tripnesia Travel</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="content.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-icon">✈️</span>
+            <span class="logo-text">Tripnesia Travel</span>
+        </div>
+        <!-- Navigation Menu -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="content.html" class="active">Destinations</a></li>
+                <li><a href="form.html">Book Now</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Page Title Section -->
+        <section class="page-hero">
+            <h1>Explore Our Destinations</h1>
+            <p>Discover amazing places around the world</p>
+        </section>
+
+        <!-- Flexbox Layout Section -->
+        <section class="destinations-flex">
+            <h2>Popular Destinations</h2>
+            <p class="section-description">Our most loved travel packages using Flexbox layout</p>
+            
+            <!-- Flexbox Container -->
+            <div class="flex-container">
+                <article class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&h=300&fit=crop" alt="Bali, Indonesia">
+                    <div class="card-content">
+                        <h3>Bali, Indonesia</h3>
+                        <p>Experience tropical paradise with ancient temples, lush rice terraces, and stunning beaches.</p>
+                        <span class="price">From $1,299</span>
+                        <!-- Internal Link -->
+                        <a href="#bali-details" class="learn-more">Learn More</a>
+                    </div>
+                </article>
+                
+                <article class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=300&fit=crop" alt="Paris, France">
+                    <div class="card-content">
+                        <h3>Paris, France</h3>
+                        <p>The City of Light awaits with iconic landmarks, world-class cuisine, and romantic ambiance.</p>
+                        <span class="price">From $1,599</span>
+                        <!-- Internal Link -->
+                        <a href="#paris-details" class="learn-more">Learn More</a>
+                    </div>
+                </article>
+                
+                <article class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&h=300&fit=crop" alt="Kyoto, Japan">
+                    <div class="card-content">
+                        <h3>Kyoto, Japan</h3>
+                        <p>Immerse yourself in traditional Japanese culture with ancient temples and cherry blossoms.</p>
+                        <span class="price">From $1,899</span>
+                        <!-- Internal Link -->
+                        <a href="#kyoto-details" class="learn-more">Learn More</a>
+                    </div>
+                </article>
+                
+                <article class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=400&h=300&fit=crop" alt="Safari in Kenya">
+                    <div class="card-content">
+                        <h3>Kenya Safari</h3>
+                        <p>Witness the great migration and experience wildlife in their natural habitat.</p>
+                        <span class="price">From $2,499</span>
+                        <!-- Internal Link -->
+                        <a href="#kenya-details" class="learn-more">Learn More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CSS Grid Layout Section -->
+        <section class="destinations-grid">
+            <h2>Destination Categories</h2>
+            <p class="section-description">Explore by travel style using CSS Grid layout</p>
+            
+            <!-- Grid Container -->
+            <div class="grid-container">
+                <div class="grid-item beach">
+                    <div class="grid-overlay">
+                        <h3>Beach Getaways</h3>
+                        <p>Sun, sand, and relaxation</p>
+                    </div>
+                </div>
+                <div class="grid-item mountain">
+                    <div class="grid-overlay">
+                        <h3>Mountain Adventures</h3>
+                        <p>Hiking and alpine experiences</p>
+                    </div>
+                </div>
+                <div class="grid-item city">
+                    <div class="grid-overlay">
+                        <h3>City Breaks</h3>
+                        <p>Urban exploration and culture</p>
+                    </div>
+                </div>
+                <div class="grid-item safari">
+                    <div class="grid-overlay">
+                        <h3>Wildlife Safari</h3>
+                        <p>Close encounters with nature</p>
+                    </div>
+                </div>
+                <div class="grid-item cruise">
+                    <div class="grid-overlay">
+                        <h3>Cruise Holidays</h3>
+                        <p>Luxury on the water</p>
+                    </div>
+                </div>
+                <div class="grid-item cultural">
+                    <div class="grid-overlay">
+                        <h3>Cultural Tours</h3>
+                        <p>History and heritage</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lists Section -->
+        <section class="lists-section">
+            <div class="lists-container">
+                <!-- Ordered List -->
+                <div class="list-box">
+                    <h3>Top 5 Must-Visit Destinations in 2024</h3>
+                    <ol class="ordered-list">
+                        <li>
+                            <strong>Maldives</strong> - Crystal clear waters and overwater villas
+                        </li>
+                        <li>
+                            <strong>Iceland</strong> - Northern lights and volcanic landscapes
+                        </li>
+                        <li>
+                            <strong>New Zealand</strong> - Adventure sports and stunning scenery
+                        </li>
+                        <li>
+                            <strong>Portugal</strong> - Historic cities and beautiful coastline
+                        </li>
+                        <li>
+                            <strong>Costa Rica</strong> - Biodiversity and eco-tourism
+                        </li>
+                    </ol>
+                </div>
+                
+                <!-- Unordered List -->
+                <div class="list-box">
+                    <h3>What's Included in Our Packages</h3>
+                    <ul class="unordered-list">
+                        <li>Round-trip international flights</li>
+                        <li>Luxury accommodation (4-5 star hotels)</li>
+                        <li>Daily breakfast and select meals</li>
+                        <li>Professional English-speaking guides</li>
+                        <li>Airport transfers and transportation</li>
+                        <li>Travel insurance coverage</li>
+                        <li>24/7 customer support</li>
+                        <li>Exclusive local experiences</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- External Links Section -->
+        <section class="resources-section">
+            <h2>Travel Resources</h2>
+            <p class="section-description">Useful external links for planning your trip</p>
+            <div class="resources-container">
+                <a href="https://www.lonelyplanet.com" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <span class="resource-icon">📚</span>
+                    <span>Lonely Planet Travel Guides</span>
+                </a>
+                <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <span class="resource-icon">⭐</span>
+                    <span>TripAdvisor Reviews</span>
+                </a>
+                <a href="https://www.skyscanner.com" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <span class="resource-icon">✈️</span>
+                    <span>Skyscanner Flight Search</span>
+                </a>
+                <a href="https://www.xe.com/currencyconverter" target="_blank" rel="noopener noreferrer" class="resource-link">
+                    <span class="resource-icon">💱</span>
+                    <span>XE Currency Converter</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Embedded iFrame Section -->
+        <section class="map-section" id="bali-details">
+            <h2>Explore Bali on the Map</h2>
+            <p class="section-description">Interactive map to plan your Bali adventure</p>
+            <div class="iframe-container">
+                <!-- Embedded Google Maps iframe -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505154.66830884!2d115.06061024374999!3d-8.453553999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd22f7a8b1bcfd5%3A0x40d8b6c0e7c7a02a!2sBali%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1699500000000!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Map of Bali, Indonesia">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Destination Details (Internal Link Targets) -->
+        <section class="details-section" id="paris-details">
+            <div class="detail-card">
+                <h3>Paris Travel Details</h3>
+                <p>Paris offers iconic landmarks like the Eiffel Tower, world-renowned museums including the Louvre, and charming neighborhoods. Best visited in spring or fall for pleasant weather.</p>
+            </div>
+        </section>
+
+        <section class="details-section" id="kyoto-details">
+            <div class="detail-card">
+                <h3>Kyoto Travel Details</h3>
+                <p>Kyoto is home to over 2,000 temples and shrines, traditional geisha districts, and stunning bamboo forests. Cherry blossom season (March-April) is the most magical time to visit.</p>
+            </div>
+        </section>
+
+        <section class="details-section" id="kenya-details">
+            <div class="detail-card">
+                <h3>Kenya Safari Details</h3>
+                <p>Experience the Maasai Mara during the Great Migration (July-October) for the ultimate wildlife spectacle. Our safari packages include expert guides and luxury lodges.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Tripnesia Travel</h4>
+                <p>Making travel dreams come true since 2009.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="content.html">Destinations</a></li>
+                    <li><a href="form.html">Book Now</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@Tripnesiatravel.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tripnesia Travel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

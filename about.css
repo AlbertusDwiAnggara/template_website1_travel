@@ -1,0 +1,647 @@
+/* 
+ * about.css - Styles specific to the About/Profile Page
+ * Wanderlust Travel Website
+ * Personal profile/portfolio page with skills and contact links
+ */
+
+/* ============================================
+   CSS Reset and Base Styles
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* ============================================
+   Header Styles
+   ============================================ */
+.main-header {
+    background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   Page Hero Section
+   ============================================ */
+.page-hero {
+    background: linear-gradient(rgba(26, 82, 118, 0.9), rgba(41, 128, 185, 0.9)), 
+                url('https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1200') center/cover;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-hero p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Profile Section Styles
+   ============================================ */
+.profile-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+/* Profile Photo */
+.profile-photo {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profile-photo img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.photo-frame {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    bottom: 10px;
+    border: 3px solid #2980b9;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+/* Profile Info */
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    font-size: 2.5rem;
+    color: #1a5276;
+    margin-bottom: 0.3rem;
+}
+
+.profile-info .title {
+    font-size: 1.2rem;
+    color: #2980b9;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.bio p {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Profile Stats */
+.profile-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #eee;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2980b9;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ============================================
+   Skills Section Styles
+   ============================================ */
+.skills-section {
+    padding: 4rem 2rem;
+    background: #f0f4f8;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #1a5276;
+    margin-bottom: 3rem;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    color: #1a5276;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.skill-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+/* Skill Progress Bar */
+.skill-bar {
+    height: 8px;
+    background: #e0e6ed;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #2980b9, #27ae60);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* ============================================
+   Certifications Section Styles
+   ============================================ */
+.certifications-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.certifications-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a5276;
+    margin-bottom: 2rem;
+}
+
+.cert-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cert-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    border: 2px solid #dde2e8;
+    font-weight: 500;
+    color: #444;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.cert-badge:hover {
+    border-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+.cert-icon {
+    font-size: 1.5rem;
+}
+
+/* ============================================
+   Social Section Styles
+   ============================================ */
+.social-section {
+    padding: 4rem 2rem;
+    background: #f0f4f8;
+}
+
+.social-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a5276;
+    margin-bottom: 0.5rem;
+}
+
+.section-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2.5rem;
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.social-link:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Social Link Colors */
+.social-link.instagram {
+    border-left-color: #e4405f;
+}
+
+.social-link.facebook {
+    border-left-color: #1877f2;
+}
+
+.social-link.twitter {
+    border-left-color: #1da1f2;
+}
+
+.social-link.youtube {
+    border-left-color: #ff0000;
+}
+
+.social-link.linkedin {
+    border-left-color: #0a66c2;
+}
+
+.social-link.email {
+    border-left-color: #27ae60;
+}
+
+.social-icon {
+    font-size: 1.8rem;
+}
+
+.social-name {
+    font-weight: 600;
+    display: block;
+}
+
+.social-handle {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* ============================================
+   Testimonials Section Styles
+   ============================================ */
+.testimonials-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.testimonials-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a5276;
+    margin-bottom: 3rem;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 4rem;
+    color: #2980b9;
+    opacity: 0.2;
+    font-family: Georgia, serif;
+}
+
+.testimonial-content {
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-content p {
+    color: #555;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-author strong {
+    display: block;
+    color: #1a5276;
+}
+
+.testimonial-author span {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* ============================================
+   CTA Section Styles
+   ============================================ */
+.cta-section {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #1a5276;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   Footer Styles
+   ============================================ */
+.main-footer {
+    background: #1a5276;
+    color: white;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    /* Header responsive */
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Page hero responsive */
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    /* Profile section responsive */
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-photo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .photo-frame {
+        display: none;
+    }
+
+    .profile-stats {
+        justify-content: center;
+    }
+
+    /* Skills responsive */
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Certifications responsive */
+    .cert-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Testimonials responsive */
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* CTA responsive */
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Footer responsive */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+}

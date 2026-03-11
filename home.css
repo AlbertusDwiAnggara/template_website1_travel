@@ -1,0 +1,436 @@
+/* 
+ * home.css - Styles specific to the Home Page
+ * Wanderlust Travel Website
+ */
+
+/* ============================================
+   CSS Reset and Base Styles
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* ============================================
+   Header Styles
+   ============================================ */
+.main-header {
+    background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation Styles */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   Carousel Styles
+   ============================================ */
+.hero-section {
+    width: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+}
+
+/* Individual Slides */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slide Content Overlay */
+.slide-content {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    max-width: none;
+}
+
+.slide-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.slide-content p {
+    font-size: 1.1rem;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: white;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator:hover,
+.indicator.active {
+    background: white;
+}
+
+/* ============================================
+   Welcome Section Styles
+   ============================================ */
+.welcome-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.welcome-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.welcome-image {
+    flex: 1;
+}
+
+.welcome-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-text {
+    flex: 1;
+}
+
+.welcome-text h1 {
+    font-size: 2.5rem;
+    color: #1a5276;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-text p {
+    margin-bottom: 1rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    background: #2980b9;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #1a5276;
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   Features Section Styles
+   ============================================ */
+.features-section {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.features-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a5276;
+    margin-bottom: 3rem;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #1a5276;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   Footer Styles
+   ============================================ */
+.main-footer {
+    background: #1a5276;
+    color: white;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    /* Header responsive */
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-nav ul {
+        gap: 1rem;
+    }
+
+    /* Carousel responsive */
+    .carousel-container {
+        height: 350px;
+    }
+
+    .slide-content {
+        transform: none;
+        left: 20px;
+        right: 20px;
+        bottom: 60px;
+        max-width: none;
+    }
+
+    .slide-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    /* Welcome section responsive */
+    .welcome-container {
+        flex-direction: column;
+    }
+
+    .welcome-text h1 {
+        font-size: 2rem;
+    }
+
+    /* Features responsive */
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Footer responsive */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

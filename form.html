@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - Tripnesia Travel</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-icon">✈️</span>
+            <span class="logo-text">Tripnesia Travel</span>
+        </div>
+        <!-- Navigation Menu -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="content.html">Destinations</a></li>
+                <li><a href="form.html" class="active">Book Now</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Page Title Section -->
+        <section class="page-hero">
+            <h1>Book Your Dream Trip</h1>
+            <p>Fill out the form below and let us plan your perfect vacation</p>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section class="form-section">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Trip Booking Request</h2>
+                    <p>Complete all fields to receive a personalized travel quote</p>
+                </div>
+
+                <!-- Main Booking Form using Table Layout -->
+                <form id="booking-form" action="#" method="post">
+                    
+                    <!-- Personal Information Fieldset -->
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <table class="form-table">
+                            <tr>
+                                <td>
+                                    <label for="first-name">First Name *</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="last-name">Last Name *</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="last-name" name="last-name" required placeholder="Enter your last name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="email">Email Address *</label>
+                                </td>
+                                <td>
+                                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="phone">Phone Number *</label>
+                                </td>
+                                <td>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="dob">Date of Birth</label>
+                                </td>
+                                <td>
+                                    <input type="date" id="dob" name="dob">
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <!-- Trip Details Fieldset -->
+                    <fieldset>
+                        <legend>Trip Details</legend>
+                        <table class="form-table">
+                            <tr>
+                                <td>
+                                    <label for="destination">Preferred Destination *</label>
+                                </td>
+                                <td>
+                                    <select id="destination" name="destination" required>
+                                        <option value="">-- Select a destination --</option>
+                                        <optgroup label="Beach Destinations">
+                                            <option value="bali">Bali, Indonesia</option>
+                                            <option value="maldives">Maldives</option>
+                                            <option value="caribbean">Caribbean Islands</option>
+                                            <option value="hawaii">Hawaii, USA</option>
+                                        </optgroup>
+                                        <optgroup label="City Breaks">
+                                            <option value="paris">Paris, France</option>
+                                            <option value="rome">Rome, Italy</option>
+                                            <option value="tokyo">Tokyo, Japan</option>
+                                            <option value="new-york">New York, USA</option>
+                                        </optgroup>
+                                        <optgroup label="Adventure">
+                                            <option value="kenya">Kenya Safari</option>
+                                            <option value="iceland">Iceland</option>
+                                            <option value="new-zealand">New Zealand</option>
+                                            <option value="peru">Peru (Machu Picchu)</option>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="departure-date">Departure Date *</label>
+                                </td>
+                                <td>
+                                    <input type="date" id="departure-date" name="departure-date" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="return-date">Return Date *</label>
+                                </td>
+                                <td>
+                                    <input type="date" id="return-date" name="return-date" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="travelers">Number of Travelers *</label>
+                                </td>
+                                <td>
+                                    <input type="number" id="travelers" name="travelers" min="1" max="20" value="2" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Trip Type *</label>
+                                </td>
+                                <td class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="trip-type" value="vacation" required> 
+                                        <span>Vacation</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="trip-type" value="honeymoon"> 
+                                        <span>Honeymoon</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="trip-type" value="business"> 
+                                        <span>Business</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="trip-type" value="adventure"> 
+                                        <span>Adventure</span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <!-- Preferences Fieldset -->
+                    <fieldset>
+                        <legend>Preferences & Requirements</legend>
+                        <table class="form-table">
+                            <tr>
+                                <td>
+                                    <label for="budget">Budget Range</label>
+                                </td>
+                                <td>
+                                    <select id="budget" name="budget">
+                                        <option value="">-- Select budget range --</option>
+                                        <option value="economy">Economy ($500 - $1,500)</option>
+                                        <option value="standard">Standard ($1,500 - $3,000)</option>
+                                        <option value="premium">Premium ($3,000 - $5,000)</option>
+                                        <option value="luxury">Luxury ($5,000+)</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="accommodation">Accommodation Type</label>
+                                </td>
+                                <td>
+                                    <select id="accommodation" name="accommodation">
+                                        <option value="">-- Select accommodation --</option>
+                                        <option value="hostel">Hostel / Budget</option>
+                                        <option value="hotel-3">3-Star Hotel</option>
+                                        <option value="hotel-4">4-Star Hotel</option>
+                                        <option value="hotel-5">5-Star Hotel</option>
+                                        <option value="resort">Luxury Resort</option>
+                                        <option value="villa">Private Villa</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Additional Services</label>
+                                </td>
+                                <td class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="services" value="airport-transfer">
+                                        <span>Airport Transfer</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="services" value="travel-insurance">
+                                        <span>Travel Insurance</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="services" value="guided-tours">
+                                        <span>Guided Tours</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="services" value="car-rental">
+                                        <span>Car Rental</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="services" value="meal-plan">
+                                        <span>Meal Plan</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="services" value="spa-wellness">
+                                        <span>Spa & Wellness</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="special-requests">Special Requests</label>
+                                </td>
+                                <td>
+                                    <textarea id="special-requests" name="special-requests" rows="4" placeholder="Tell us about any dietary requirements, accessibility needs, or special occasions..."></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <!-- Terms and Submit Fieldset -->
+                    <fieldset>
+                        <legend>Confirmation</legend>
+                        <table class="form-table">
+                            <tr>
+                                <td colspan="2" class="terms-cell">
+                                    <label class="checkbox-label terms-label">
+                                        <input type="checkbox" id="terms" name="terms" required>
+                                        <span>I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a> *</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="terms-cell">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="newsletter">
+                                        <span>Subscribe to our newsletter for exclusive deals and travel tips</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="submit-cell">
+                                    <!-- Submit Button using <button> element -->
+                                    <button type="submit" class="submit-btn">
+                                        <span class="btn-icon">✈️</span>
+                                        <span>Submit Booking Request</span>
+                                    </button>
+                                    <button type="reset" class="reset-btn">Clear Form</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+
+                <!-- Form submission message -->
+                <div id="form-message" class="form-message hidden">
+                    <div class="message-content">
+                        <span class="message-icon">✅</span>
+                        <h3>Thank You!</h3>
+                        <p>Your booking request has been submitted successfully. Our travel consultants will contact you within 24 hours with a personalized quote.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section class="contact-section">
+            <h2>Need Help?</h2>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <span class="contact-icon">📞</span>
+                    <h3>Call Us</h3>
+                    <p>+1 (555) 123-4567</p>
+                    <p>Mon-Fri: 9AM - 6PM EST</p>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">📧</span>
+                    <h3>Email Us</h3>
+                    <p>bookings@Tripnesiatravel.com</p>
+                    <p>Response within 24 hours</p>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">💬</span>
+                    <h3>Live Chat</h3>
+                    <p>Chat with our experts</p>
+                    <p>Available 24/7</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Tripnesia Travel</h4>
+                <p>Making travel dreams come true since 2009.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="content.html">Destinations</a></li>
+                    <li><a href="form.html">Book Now</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@Tripnesiatravel.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tripnesia Travel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Form Handling -->
+    <script>
+        // Form submission handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('booking-form');
+            const formMessage = document.getElementById('form-message');
+
+            // Form submission event
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent actual form submission for demo
+
+                // Validate dates
+                const departureDate = new Date(document.getElementById('departure-date').value);
+                const returnDate = new Date(document.getElementById('return-date').value);
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+
+                if (departureDate < today) {
+                    alert('Departure date cannot be in the past.');
+                    return;
+                }
+
+                if (returnDate <= departureDate) {
+                    alert('Return date must be after departure date.');
+                    return;
+                }
+
+                // Show success message
+                form.style.display = 'none';
+                formMessage.classList.remove('hidden');
+
+                // Scroll to message
+                formMessage.scrollIntoView({ behavior: 'smooth' });
+
+                // Log form data (for demonstration)
+                const formData = new FormData(form);
+                console.log('Form submitted with data:');
+                for (let [key, value] of formData.entries()) {
+                    console.log(`${key}: ${value}`);
+                }
+            });
+
+            // Set minimum date for departure (today)
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('departure-date').setAttribute('min', today);
+            document.getElementById('return-date').setAttribute('min', today);
+
+            // Update return date minimum when departure date changes
+            document.getElementById('departure-date').addEventListener('change', function() {
+                document.getElementById('return-date').setAttribute('min', this.value);
+            });
+        });
+    </script>
+</body>
+</html>
